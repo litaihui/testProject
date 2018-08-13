@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "AViewController.h"
 @interface ViewController ()
 
 @end
@@ -17,12 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.title = @"根控制器";
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    AViewController *a = [AViewController new];
+    [self.navigationController pushViewController:a animated:YES];
 }
 
 
